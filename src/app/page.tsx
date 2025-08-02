@@ -39,6 +39,8 @@ export default function Home() {
     },
   });
 
+  
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [stakeEvents, setStakeEvents] = useState<any[]>([]);
 
 useWatchContractEvent({
@@ -48,6 +50,7 @@ useWatchContractEvent({
   onLogs(logs) {
     setStakeEvents((prev) => [
       ...prev,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ...logs.map((log: any) => ({
         address: log.args?.user,
         amount: log.args?.amount ? Number(log.args.amount) / 1e18 : 0,

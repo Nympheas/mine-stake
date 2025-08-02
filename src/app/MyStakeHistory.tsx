@@ -26,6 +26,7 @@ type StakeLog = {
   block: bigint;
 };
 
+
 export function MyStakeHistory() {
   const { address } = useAccount();
   const [logs, setLogs] = useState<StakeLog[]>([]);
@@ -63,6 +64,7 @@ export function MyStakeHistory() {
 
         setLogs(userLogs);
         setError(null);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message || '读取失败');
       } finally {

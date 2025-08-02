@@ -58,6 +58,7 @@ export function StakeHistory() {
 
         setLogs(parsed.reverse()); // 最近的放前面
         setError(null);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message || '获取质押记录失败');
       } finally {
