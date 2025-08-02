@@ -1,4 +1,4 @@
-export const STAKE_CONTRACT_ADDRESS = "0x9A0b7121204C3bAE39583426657C2a47bF506688";
+export const STAKE_CONTRACT_ADDRESS = "0x182a15726dC2a30e6b3fe395e3Ea83D786cf4888";
 
 export const STAKE_CONTRACT_ABI = [
 	{
@@ -67,6 +67,19 @@ export const STAKE_CONTRACT_ABI = [
 			}
 		],
 		"name": "balances",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getContractBalance",
 		"outputs": [
 			{
 				"internalType": "uint256",
